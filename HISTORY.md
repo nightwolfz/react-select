@@ -62,7 +62,7 @@ Otherwise known as "the real 0.6.2" this includes the updated build for the last
 
 ## v0.5.5 / 2015-07-12
 
-* fixed; replaced usage of `component.getDOMNode()` with `React.findDOMNode(component)` for compatibility with React 0.14
+* fixed; replaced usage of `component.getDOMNode()` with `ReactDOM.findDOMNode(component)` for compatibility with React 0.14
 
 ## v0.5.4 / 2015-07-06
 

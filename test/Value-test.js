@@ -15,6 +15,7 @@ var expect = unexpected
 	.installPlugin(unexpectedDom);
 
 var React = require('react/addons');
+var ReactDOM = require('react-dom');
 var TestUtils = React.addons.TestUtils;
 
 var OPTION = { label: 'TEST-LABEL', value: 'TEST-VALUE' };
@@ -56,7 +57,7 @@ describe('Value component', function() {
 
 		it('presents the given label', function() {
 			var selectItemLabel = TestUtils.findRenderedDOMComponentWithClass(value, 'Select-item-label');
-			expect(React.findDOMNode(selectItemLabel), 'to have text', OPTION.label);
+			expect(ReactDOM.findDOMNode(selectItemLabel), 'to have text', OPTION.label);
 		});
 
 	});
@@ -76,7 +77,7 @@ describe('Value component', function() {
 		});
 
 		it('presents the given label', function() {
-			expect(React.findDOMNode(selectItemLabelA), 'to have text', OPTION.label);
+			expect(ReactDOM.findDOMNode(selectItemLabelA), 'to have text', OPTION.label);
 		});
 
 		it('calls a custom callback when the anchor is clicked', function() {
